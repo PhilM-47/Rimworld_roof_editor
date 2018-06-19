@@ -61,9 +61,6 @@ class RimMapRoof(object):
 
         if code[1] == '<roofsDeflate>':
           codes = zlib.decompress(''.join(code[2:-1]).decode('base64'), -zlib.MAX_WBITS)
-          with open("decompressedRoofs", "w") as temp7z:
-            temp7z.write(codes)
-          print len(codes)
           cells = [codes[k:k+2] for k in range(0,len(codes),2)]
           idx = 0
           for cell in cells:
