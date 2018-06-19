@@ -1,5 +1,5 @@
 import numpy as np
-import base64, shutil, sys, zlib
+import base64, shutil, zlib
 from PIL import Image
 
 bytes2sky_type = {}
